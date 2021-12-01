@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <title>Question 2</title>>
+</head>
+<style>
+    #container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#amount {
+    background-color: #914da554;
+    border: 0;
+    color: white;
+}
+
+#amount:hover {
+    background-color: #904da5b9;
+}
+
+#amount:focus {
+    outline: none;
+}
+
+#draw {
+    background-color: #914da554;
+    border: 0;
+    color: white;
+}
+
+#draw:focus {
+    outline: none;
+}
+
+#draw:hover {
+    background-color: #904da5b9;
+}
+
+#squares {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+#squares > div {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    background-color: rgb(175, 34, 34);
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+</style>
+<script>
+    window.onload=function(){
+    //Elements
+    const drawButton = document.getElementById("draw");
+    const inputtedSquares = document.getElementById("amount");
+    const divSquares = document.getElementById("squares");
+
+    //Draw button click function
+    document.getElementById("draw").addEventListener('click', ()=>{
+        divSquares.innerHTML = ''; //Delete existing squares if any
+        //Create squares
+        let n = 5; //Initial margin
+        for(let i = 1; i <= inputtedSquares.value; i++) { //Loop depending on inputSquares.value
+            //Create and style the squares
+            let newSquare = document.createElement("div");
+            newSquare.innerText = i;
+            newSquare.style.marginLeft = n + "px"; //
+            newSquare.style.backgroundColor = Math.floor(Math.random()*16777215).toString(16); //Random color
+            n*=2;
+            divSquares.appendChild(newSquare);
+        }
+    });
+}
+</script>
+<body>
+    <div id="container">
+        <input id="amount">
+        <button id="draw">Draw</button>
+    </div>
+    <div id="squares"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script src="Q1.js"></script>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="Q1.css">
+</head>
+<body>
+    <form autocomplete="off">
+        <h1>Welcome to the Gym</h1>
+        <div id="nameslot">
+            <p id="name">Name</p>
+            <input placeholder="Enter your name" id="Name"></input>
+        </div>
+        <div id="ageslot">
+            <p id="age">Age</p>
+            <input placeholder="Enter your age" id="Age"></input>
+        </div>
+        <div id="heightslot">
+            <p id="height">Height</p>
+            <select id="Feet">
+                <option value="4'">4'</option>
+                <option value="5'">5'</option>
+                <option value="6'">6'</option>
+            </select>
+            <select id="Inches">
+                <option value="0">0"</option>
+                <option value="1">1"</option>
+                <option value="2">2"</option>
+                <option value="3">3"</option>
+                <option value="4">4"</option>
+                <option value="5">5"</option>
+                <option value="6">6"</option>
+                <option value="7">7"</option>
+                <option value="8">8"</option>
+                <option value="9">9"</option>
+                <option value="10">10"</option>
+                <option value="11">11"</option>
+            </select>
+        </div>
+        <div id="dateslot">
+            <p id="date">Start Date</p>
+        </div>
+            <input type="date" id="inputDate"></input>
+        </div>
+        <button type='button' id="reset"><span>Reset</span></button>
+        <button type='button' id="display"><span>Display</span></button>
+        <table id="table">
+            <div id="list">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Start Date</th>
+                    <th id="entries">0</th>
+                  </tr>
+            </div>
+        </table>
+    </form>
+</body>
+</html>
